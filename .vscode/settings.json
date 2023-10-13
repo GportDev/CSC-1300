@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "iomanip": "cpp",
+        "ostream": "cpp",
+        "ios": "cpp",
+        "iostream": "cpp",
+        "string": "cpp",
+        "charconv": "cpp",
+        "limits": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
+}
