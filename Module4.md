@@ -2,16 +2,18 @@
 
 The sentences we use to change the direction of the flow, it will wrap code dependents to some conditions.
 
-## If branch syntax
+<br/>
 
+## If branch syntax
 ```cpp
-    if (condition) {
-        //Do that
-    }
+if (condition) {
+    //Do that
+}
 ```
 
 Obs: The curly brackets are optional
 
+<br/>
 
 ## Relational operators
 
@@ -27,9 +29,9 @@ Obs: The curly brackets are optional
 | && | And |
 |!| Not|
 
+<br/>
 
 ## If-else branch
-
 ```cpp
 
 if (number % 2 == 0) {
@@ -39,14 +41,15 @@ if (number % 2 == 0) {
 }
 
 ```
+<br/>
 
 ## If-Else-If branch
 
 Allow you to add a new condition to this statement.
 
+<br/>
 
 # Switch statements
-
 Select among statements from several alternatives.
 Could be used instead of cascade if/else
 It needs a `break` statement for each case

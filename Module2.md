@@ -1,28 +1,37 @@
 # Computational thinking
-Process of approaching a problem in a systematic manner (Step-by-step) and creating and expressing a solution for the computer
+
+Process of approaching a problem in a systematic manner (Step-by-step), creating and expressing a solution for the computer.<br/>
 There are 4 important characteristic for algorithm:
-- 
--
--
--
+
+- Decomposition (Take ideia and problems apart)
+- Pattern Recognition (Look for similarities or trends)
+- Abstraction (Transform the problem and focus on what's important)
+- Algorithmic design (Create step-by-step instructions)
 
 ## Algorithm
-Is a clear sequence of instruction used to solve a specific problem
+*Is a clear sequence of instruction used to solve a specific problem*
 
 ### From Algorithm to program
+Write the code (Statements) that follow the algorithm instructions
+Save the code in a file (for C++ is .cpp)
+Compile it in a Compiler (converting the code into machine language) to became a executable program
 
-Write the code (Statements)
-Save in a file (for C++ is .cpp)
-Compile it in a Compiler to became a executable program
+<br/>
+<br/>
+<br/>
 
-## Procedural Design
-Used to model programs that have an obvious flow of data
+# Procedural Design
+Used to model programs that have an obvious flow of data (**Input -> Processing -> Output**)
 Is a programming paradigm built around the idea that exist a sequence of statements 
 
 ## Instruction types
 - Inputs
 - Processing (Calculation)
 - Output
+
+<br/>
+<br/>
+<br/>
 
 
 # Parts of a program
@@ -39,19 +48,32 @@ int main() {
 
 ```
 
+- **Code (Textual representations of a program)**
 - Main -> Where the program starts execute (Function)
 - Curly Braces -> Enclose a block of statements
 - Indentions -> The space before a code in a line that meaning that line is inside the previous block
 - Return Statement -> Where the programs ends (Main should have a return statement - at least a return 0)
 - Variables -> Piece of memory where we store data to use in the program. They must be defined in C++ before use
 
-### COUT (Console OUTput)
+## Variables
+Piece of memory where the program will store information to be referenced and manipulated.
 
-- Use to display info to the screen
+They should be defined in C++ with a statement called **Variable definition** before being used
 
-- Come from the package <iostream>
+Contain the data type about the information that will be stored along with the name of the variable
 
-- Must use << the stream insertion operator
+`int height;`
+
+
+## `cout` (Console OUTput) - Insert in the screen
+
+- Use to display info to the screen/terminal
+
+- Come from the package `<iostream>`
+
+- Use `<<` the stream ***insertion operator***
+
+- Unless you specify otherwise, the information is displayed in a continuous stream
 
 \n - newline
 
@@ -65,22 +87,30 @@ int main() {
 
 \" - double quote
 
+<br/>
 
-### ENDL
-Tells tot he operator to insert a new line
+### `endl` End of line
+Tells to the operator to go down to next line.
+
+<br/>
 
 ### Output a value stored in a Variables
-
-Do not enclose the variable in quotes
+Do not enclose the variable in quotes.
 
 ```cpp
 
-cout << "Hello " <<variable << endl
+cout << "Hello " << variable << endl
 
 ```
 
-<< means _string insertion_
->> means _string extraction_
+`<<` means _insertion_ <br/>
+`>>` means _extraction_
+
+
+<br/>
+<br/>
+<br/>
+
 
 # Compile the program
 `g++ filename.cpp -o NameExecutable`
@@ -104,11 +134,11 @@ To execute it, use:
 
 This manipulators change the way that the output works
 
-setw (w) -> `cout << stew(10) << "Crockett"` => will use to set the max points that this string will get. This rule only apply for the direct next. The string should be shorter than the width set in the function
+setw (w) -> `cout << stew(10) << "Crockett"` => will use to set the max points that this string will get. This rule **only apply** for the **direct next**. *The string should be shorter than the width set in the function*
 
-left -> 
+left -> changes the alignment
 
-right ->
+right -> changes back to right alignment
 
 With this rules we can organize our output in columns
 
@@ -124,9 +154,13 @@ int main() {
 }
 ```
 
+<br/>
+<br/>
+<br/>
+
 # Inputs
 
-command `cin` -> Console INput
+command `cin` -> **Console INput** or Characters IN
 
 We should save the use input in a variable.
 
@@ -137,7 +171,7 @@ We should save the use input in a variable.
     cin >> height;
 ```
 
-We also use more than one input per row.
+We can also use more than one input per row.
 
 ```cpp
     int height;
@@ -147,18 +181,34 @@ We also use more than one input per row.
     cin >> width >> height
 ```
 
+The values should be separated by spaces, and the first values always goes to the first variable
+
+<br/>
+<br/>
+<br/>
+
+
 # Comments
 
 Do not use this every time, use it to name main sections of the code, or to explain important things.
 
-The comments could be single lined or multi-lined spaces.
+They are intended for persons reading the code, indicating the purpose of the program, describing variable's use and explaining complex sections.
+
+The comments could be single lined `//` or multi-lined spaces `/* */`.
 
 MAKE A MULTILINE COMMENT IN THE ASSIGNMENTS
 
+They are ignored by the compiler
+
+<br/>
+<br/>
+<br/>
+
 # Errors
 
-Syntax error -> Problem while the program is compiled
-Logic error -> Problem while the program is executed
+***Syntax error*** -> Problem while the program is compiled (violates a language's rule) - Semicolons...
+<br/>
+***Logic error*** -> Problem while the program is executed (runtime error - bug) - Divide a number by zero...
 
 ## Warnings
 
@@ -167,6 +217,10 @@ Possible logic error but doesn't stop the compiler from creating an executable p
 `clang++ -Wall program.cpp`
 
 This command will compile with warnings output.
+
+<br/>
+<br/>
+<br/>
 
 # Debugging and testing programs
 
@@ -187,5 +241,9 @@ Troubleshooting -> Finding the problem or trouble with the code
 - Manually set a variable to a value
 - Insert a print of the variable
 - Comment a block of code and see what's the output
+- Visually inspect the code
+- Use a debugger
 
 ### Debbuger
+
+A computer program that assists in the detection and correction of errors in the program
