@@ -84,7 +84,7 @@ OBS: `fileName.ignore()` works in the same way of `cin.ignore()`
 
 ## Using loops to precess files
 
-The stream extractor `>>` returns *true* when a value was successfully read, and *false* otherwise. So, we can use it to make conditions to while/do-while loope
+The stream extractor `>>` returns *true* when a value was successfully read, and *false* otherwise. So, we can use it to make conditions to while/do-while loop
 
 ```cpp
 while(inputFile >> number) {

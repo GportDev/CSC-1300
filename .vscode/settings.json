@@ -6,7 +6,10 @@
         "iostream": "cpp",
         "string": "cpp",
         "charconv": "cpp",
-        "limits": "cpp"
+        "limits": "cpp",
+        "fstream": "cpp",
+        "istream": "cpp",
+        "__node_handle": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
