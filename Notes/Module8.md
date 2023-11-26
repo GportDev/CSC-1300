@@ -43,7 +43,7 @@ When you start from index 1 instead of 0.
 ```cpp
 minValue = myArray[0];
 for(int i = 0; i < numElements; i++) {
-    if(myArray[i] < minValue>) {
+    if(myArray[i] < minValue) {
         minValue = myArray[i];
     }
 }
