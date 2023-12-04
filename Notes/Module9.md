@@ -25,7 +25,7 @@ Pointers can be used as array name, since the array name just hold the memory ad
 
 ## Getting the address of a variable
 
-Since each variable in a program have an address, we just need to use the `&` dereferencing operator to get the address
+Since each variable in a program have an address, we just need to use the `&` <ins>dereference</ins> operator to get the address
 
 ```cpp
 cout << &variable;
@@ -61,7 +61,8 @@ We can initialize an pointer variables as nullptr, or the Null value
 ## The indirection operator
 
 "*" dereferences a pointer
-It allows you to access the item that the pointer points to
+
+It allows you to access the item that the pointer points to. This return the value of the memory address stored in the pointer.
 
 ```cpp
 int x = 25;
@@ -75,7 +76,7 @@ cout << *intptr << endl;
 Sum or subtract a pointer means go "up" or "down" in the array (number * size of the type of the array)
 
 ```cpp
-int vals[]={4,7,11}, *valprt;
+int vals[] = {4,7,11}, *valprt;
 valprt = vals;
 
 cout << *(valptr+1); // 7 The next memory address value in the array

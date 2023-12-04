@@ -1,12 +1,18 @@
 # Functions
 
-Block of code that can be reused along the program. It can receive arguments and return different types.
+Block of code that can be reused along the program. It can receive arguments and return one valeu of a defined type.
 
 ```cpp
-// returnType name(parameters) {
-//     statement;
+// Function definition:
+// returnType functionName(parameter list) {
+//     function body;
 // }
 //
+// Function prototype:
+// returnType functionName(parameter list);
+//
+//
+// Function call:
 // functionName(arguments);
 
 
@@ -24,6 +30,9 @@ void function2();
 
 int main() {...}
 ```
+
+- **Arguments** -> Values passed to function in the call (AC - Arguments to Calls)
+- **Parameters** -> Variables in a function that hold the values passed as arguments (PPD - Parameters to Prototypes and Definition)
 
 You can put parameters (hold the values passed as arguments) in the function definitions, the order you define it will be the order you use it when calling the function.
 
@@ -51,7 +60,7 @@ In C++ a functions can return ***ONE*** value back to the function call statemen
 <br/>
 
 ## Reference variables `&variable`
-Is an alias (another name) for another variable
+Is an <ins>alias</ins> (another name) for another variable
 
 Reference variables as **parameter** allows a function to work with the original **argument** from the function call, not a copy of the argument.
 
@@ -121,7 +130,9 @@ static int statNum = 0;
 <br/>
 <br/>
 
-## User-defined header files
+# User-defined header files
+
+Header files are commonly used to be references for the program (Include libs and pre-existing C++ header files, Data types, global constants, functions prototypes and more)
 
 Files that are defined by the user and can be imported using `#include` too.
 
@@ -129,12 +140,13 @@ The `#includes` directs the compiler that the header file needs to be processed 
 
 `#include "filename.h"`
 
-- The `driver.cpp` file will be the file with the main function, an source code file. 
+### Separating a single program in multiple files
 
+- The `driver.cpp` file will be the file with the main function, an <ins>source code</ins> file. 
 
 - Source files can include any header file. And several source files can include the same header file
 
-- You can only include the header file once in the program. In order to not have errors, we use the Include guards.
+- You can only include the header file once in the entire program. But you can include them in several source files. So in order to not have errors, we use the <ins>Include guards</ins>.
 
 ```cpp
 //referenceVars.h
@@ -149,6 +161,10 @@ void doubleNum(int&);
 
 #endif
 ```
+
+- Usually we use a file that will contain all the functions definitions for the program, it also will be a source file (.cpp)
+
+- To compile spliced programs, just compile the source files (.cpp)
 
 <br/>
 <br/>

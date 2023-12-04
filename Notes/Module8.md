@@ -1,9 +1,9 @@
 # Arrays
 
-- They have a fixed length
 - They are built-in
-- They don't have methods to manipulate this
+- They have a fixed length
 - They only can hold one type of data inside
+- They don't have methods to manipulate this
 
 ```cpp
 int list[10] // Create an array with 10 slots
@@ -13,36 +13,40 @@ Named constants are commonly used as size declarator;
 
 You can initialize the array with less values than the size, it will be auto-completed with zeros.
 
-They also cna be created with just the elements, and the size will be "implicit". A FULL initialization list is required
+```cpp
+int list[10] = {5,8,7} // Create an array with 10 slots, 3 are filled with the numbers in the list, 7 are filled with zeros
+```
+
+They also can be created with just the elements, and the size will be "implicit". A FULL initialization list is required
 
 ```cpp 
 int num[] = {5,8,7} // Create an array with 3 slots already filled
 ```
+<br/>
 
-
-
-### Access elements
+## Accessing elements
 
 To access any element inside an array we need to select the specific index of the slot we want to use.
 
-The name of the array stores the memory address of the first element
+### **The name of the array stores the memory address of the first element**
 
-C++ does not check it to make sure it is a valid index.
-
-You can use an index that is beyond the bounds of the array. But this can **corrupt other memory locations, crash, program, or lock up computer, cause elusive bugs**
+C++ does not check it to make sure that you are accessing a valid index. You can use an index that is beyond the bounds of the array. But this can **corrupt other memory locations, crash program, or lock up computer, cause elusive bugs.**
 
 <br/>
 <br/>
 
 ### Off-by-one error
 
-When you start from index 1 instead of 0.
+When you start from index 1 instead of 0. (You go further 1 than the limit)
 
 ## Min-value or Max-value algorithm
 
 ```cpp
+int minValeu; // or maxValue
 minValue = myArray[0];
+
 for(int i = 0; i < numElements; i++) {
+    // Change < to > to have max-value algorithm
     if(myArray[i] < minValue) {
         minValue = myArray[i];
     }
@@ -85,7 +89,7 @@ Use an if to compare the current position of the array1 with the array2.
 
 ## Using parallel arrays
 
-Different arrays that can be used relating data from each other by the index, the same index in different arrays will have related data.
+Different arrays that can be used relating data from each other by the index, **the same index in different arrays will have related data.**
 
 ```cpp
 const int SIZE = 5;
@@ -100,7 +104,7 @@ for (int i = 0; i < SIZE; i++) {
 <br/>
 <br/>
 
-## Two dimensional arrays (Matrix)
+## Two dimensional arrays (Matrix or Table)
 
 An array of arrays. The outer array will be the rows, the insider array will be the columns.
 
@@ -119,7 +123,7 @@ int numbers[4][5] = {
 
 ## How to pass an array to a function
 
-The arrays will always be passed by reference because the array name is the memory address of the array. We do not need to use the address operator.
+The <ins>arrays will always be passed by reference because the array name is the memory address of the array</ins>. We do not need to use the address operator.
 
 ### Function prototype
 
@@ -133,8 +137,10 @@ void findMaxInArray(int [], int);
 findMaxInArray(myArray, SIZE);
 ```
 
+<br/>
+<br/>
 
-## Char arrays / C-String
+# Char arrays / C-String
 
 You can store a sequence of characters, it was the approach to create strings before the class String came.
 
@@ -148,6 +154,10 @@ We can print a c-string with a single cout statement. Also, we can insert the va
 cin.getline(variableName, SIZE);
 ```
 
+There is a library with the methods used to process and modify c-strings 
+
+`#include <cstring>`
+
 To compare two c-strings, we need to use the method `strcmp()`, this return 0 if they are equal and 1 if not
 
 We can use another method to join two different c-strings
@@ -158,13 +168,17 @@ strcat(cStringVariable, " New string");
 
 Finally, the way that we use to find the length of a string is the method `strlen(cString)`
 
-# Vectors
+<br/>
 
-`vector<DataType> name(SIZE, initialValue(0 is default))`
+# Vectors
 
 They are a data structure like array that can only store data of the same type.
 
 Store in consecutive places in memory like an array.
+
+Vector items are called elements (or element)
+
+`vector<DataType> name(SIZE, initialValue(0 is default))`
 
 They depend of a new lib, called vector
 
@@ -204,11 +218,11 @@ Vectors check for access out of range. For access, we just use the `at()` method
 
 They are automatic initialized to 0. To use other value to initialize then, just change the second argument in the initialization.
 
-Vectors can be resized using a new size!
+Vectors can be resized using the method `resize` passing a new size!
 
 <br/>
 
-## push_back
+## push_back (push)
 
 This method allow to add new elements at the end of the vector (If it is of the same time of the vector), also, the size of the vector is increased by one
 
@@ -220,7 +234,7 @@ This method return the last element in a vector.
 
 <br/>
 
-## pop_back
+## pop_back (pop)
 
 Remove the last element in a vector, also, the size of the vector is decrease by one
 
